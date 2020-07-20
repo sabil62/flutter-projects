@@ -14,19 +14,37 @@ class _FoodFormState extends State<FoodForm> {
   String foodname;
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      TextField(
-        onChanged: (value) {
-          setState(() {
-            foodname = value;
-          });
-        },
-      ),
-      FlatButton(
-          onPressed: () {
-            BlocProvider.of(context).add(FoodEvent.add(Food(foodname)));
+    return Material(
+        child: Column(
+      children: [
+        TextField(
+          decoration: null,
+          onChanged: (value) {
+            setState(() {
+              foodname = value;
+            });
           },
-          child: Icon(Icons.ac_unit))
-    ]);
+        ),
+        SizedBox(
+          height: 30,
+        ),
+        Container(
+          height: 50,
+          width: 180,
+          decoration: BoxDecoration(
+              color: Colors.yellow[900],
+              borderRadius: BorderRadius.circular(16)),
+          child: FlatButton(
+              onPressed: () {
+                BlocProvider.of<FoodBloc>(context)
+                    .add(FoodEvent.add(Food(foodname)));
+              },
+              child: Text(
+                'Click',
+                style: TextStyle(color: Colors.white70),
+              )),
+        )
+      ],
+    ));
   }
 }

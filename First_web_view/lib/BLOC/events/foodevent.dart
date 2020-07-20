@@ -10,8 +10,8 @@ class FoodEvent {
     this.eventype = Eventype.add;
     this.food = food;
   }
-  FoodEvent.remove(int index) {
+  FoodEvent.remove(int indexs) {
     this.eventype = Eventype.remove;
-    this.index = index;
+    this.index = indexs;
   }
 }
