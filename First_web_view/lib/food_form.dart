@@ -14,11 +14,14 @@ class _FoodFormState extends State<FoodForm> {
   String foodname;
   @override
   Widget build(BuildContext context) {
-    return Material(
+    return Container(
         child: Column(
       children: [
         TextField(
-          decoration: null,
+          decoration: InputDecoration(
+              border: InputBorder.none,
+              hintText: 'Enter a search term',
+              labelText: 'Enter foodnames'),
           onChanged: (value) {
             setState(() {
               foodname = value;
