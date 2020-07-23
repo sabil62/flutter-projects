@@ -1,0 +1,12 @@
+imports
+
+List of Employee(class objects)
+Stream contollers
+
+Stream sink getter
+
+Constructor - add data; Listen to changes
+
+Core functions
+
+dispose
