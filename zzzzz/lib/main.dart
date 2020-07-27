@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zzzzz/Bloc2/studentHome.dart';
+import 'package:zzzzz/Bloc3Counter/homeCounter.dart';
 import 'package:zzzzz/home.dart';
 
 void main() {
@@ -43,6 +44,9 @@ class _MyHomeAppState extends State<MyHomeApp> {
             onTap: () => Navigator.push(context,
                 new MaterialPageRoute(builder: (context) => HomePage())),
           ),
+          SizedBox(
+            height: 25,
+          ),
           ListTile(
             leading: Icon(
               Icons.access_alarm,
@@ -53,6 +57,21 @@ class _MyHomeAppState extends State<MyHomeApp> {
             onTap: () => Navigator.push(context,
                 new MaterialPageRoute(builder: (context) {
               return HomeStudent();
+            })),
+          ),
+          SizedBox(
+            height: 25,
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.accessibility,
+              size: 24,
+              color: Colors.green,
+            ),
+            title: Text('flutter Bloc counter'),
+            onTap: () => Navigator.push(context,
+                new MaterialPageRoute(builder: (context) {
+              return HomeCounter();
             })),
           ),
         ]),
