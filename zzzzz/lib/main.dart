@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:zzzzz/Bloc2/studentHome.dart';
 import 'package:zzzzz/Bloc3Counter/homeCounter.dart';
+import 'package:zzzzz/Provider1_Simple/FrontMainProvider.dart';
+import 'package:zzzzz/Provider2_littleComplex/homeCounterMain.dart';
 import 'package:zzzzz/home.dart';
 
 void main() {
@@ -72,6 +74,51 @@ class _MyHomeAppState extends State<MyHomeApp> {
             onTap: () => Navigator.push(context,
                 new MaterialPageRoute(builder: (context) {
               return HomeCounter();
+            })),
+          ),
+          SizedBox(
+            height: 25,
+          ),
+          // ListTile(
+          //   leading: Icon(
+          //     Icons.accessibility,
+          //     size: 27,
+          //     color: Colors.brown,
+          //   ),
+          //   title: Text('flutter PROVIDER counter'),
+          //   onTap: () => Navigator.push(context,
+          //       new MaterialPageRoute(builder: (context) {
+          //     return HomeMainCounterProvider();
+          //   })),
+          // ),
+          SizedBox(
+            height: 25,
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.cloud_upload,
+              size: 24,
+              color: Colors.pink,
+            ),
+            title: Text('flutter PROVIDER ANOTHER counter'),
+            onTap: () => Navigator.push(context,
+                new MaterialPageRoute(builder: (context) {
+              return FrontMainProvider();
+            })),
+          ),
+          SizedBox(
+            height: 25,
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.loupe,
+              size: 26,
+              color: Colors.indigo,
+            ),
+            title: Text('flutter PROVIDER ANOTHER counter'),
+            onTap: () => Navigator.push(context,
+                new MaterialPageRoute(builder: (context) {
+              return HomeCounterSimpleMain();
             })),
           ),
         ]),
